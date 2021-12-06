@@ -1,23 +1,15 @@
 package com.daniebeler.games;
 
 import org.newdawn.slick.Color;
-import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
-public class CircleActor implements Actor, Observer{
+public class CircleActor extends AbstractActor implements Observer{
 
-    private MoveStrategy moveStrategy;
     private Color color;
 
-    public CircleActor(MoveStrategy mr){
-        super();
-        this.moveStrategy = mr;
+    public CircleActor(MoveStrategy moveStrategy) {
+        super(moveStrategy);
         this.color = Color.white;
-    }
-
-    @Override
-    public void update(GameContainer gc, int delta) {
-        moveStrategy.update(delta);
     }
 
     @Override
