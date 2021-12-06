@@ -15,7 +15,6 @@ public class CircleActor implements Actor, Observer{
         this.color = Color.white;
     }
 
-
     @Override
     public void update(GameContainer gc, int delta) {
         moveStrategy.update(delta);
@@ -30,6 +29,6 @@ public class CircleActor implements Actor, Observer{
 
     @Override
     public void inform() {
-        this.color = color.pink;
+        this.color = Color.pink;
     }
 }

@@ -42,11 +42,6 @@ public class MainGame extends BasicGame {
         this.actors.add(ra1);
         this.actors.add(ra2);
 
-/*        this.actors.add(new Snowflakes(Snowflakes.size.small));
-        this.actors.add(new Snowflakes(Snowflakes.size.big));
-        this.actors.add(new Snowflakes(Snowflakes.size.small));
-        this.actors.add(new Snowflakes(Snowflakes.size.small));*/
-
         this.player.addObserver(ca1);
         this.player.addObserver(ca2);
         this.player.addObserver(oa1);
