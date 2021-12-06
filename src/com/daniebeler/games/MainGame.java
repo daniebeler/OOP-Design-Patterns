@@ -47,6 +47,16 @@ public class MainGame extends BasicGame {
         this.player.addObserver(oa2);
         this.player.addObserver(ra1);
         this.player.addObserver(ra2);
+
+
+        CounterSingleton cs1 = CounterSingleton.getInstance();
+        CounterSingleton cs2 = CounterSingleton.getInstance();
+
+        cs1.increase();
+        cs2.increase();
+
+        System.out.println("CounterSingleton 1: " + cs1.getCounter());
+        System.out.println("CounterSingleton 2: " + cs2.getCounter());
     }
 
     @Override
