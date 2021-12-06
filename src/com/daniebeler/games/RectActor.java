@@ -3,6 +3,8 @@ package com.daniebeler.games;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
+import java.util.Random;
+
 public class RectActor extends AbstractActor implements Observer{
 
     private Color color;
@@ -12,8 +14,8 @@ public class RectActor extends AbstractActor implements Observer{
         this.color = Color.pink;
     }
 
-    public RectActor(MoveStrategy moveStrategy) {
-        super(moveStrategy);
+    public RectActor() {
+        super(new MoveDiagonal(new Random().nextInt(800), new Random().nextInt(600), 0.1f + new Random().nextFloat() * (1 - 0.1f)));
         this.color = Color.white;
     }
 

@@ -2,7 +2,7 @@ package com.daniebeler.games;
 
 import org.newdawn.slick.GameContainer;
 
-public abstract class AbstractActor implements Actor{
+public abstract class AbstractActor implements Actor {
 
     protected MoveStrategy moveStrategy;
 

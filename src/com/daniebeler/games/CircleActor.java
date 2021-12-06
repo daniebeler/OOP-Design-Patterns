@@ -3,12 +3,14 @@ package com.daniebeler.games;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.Graphics;
 
+import java.util.Random;
+
 public class CircleActor extends AbstractActor implements Observer{
 
     private Color color;
 
-    public CircleActor(MoveStrategy moveStrategy) {
-        super(moveStrategy);
+    public CircleActor() {
+        super(new MoveDiagonal(new Random().nextInt(800), new Random().nextInt(600), 0.1f + new Random().nextFloat() * (1 - 0.1f)));
         this.color = Color.white;
     }
 

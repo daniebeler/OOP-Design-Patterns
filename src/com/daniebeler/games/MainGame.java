@@ -19,20 +19,14 @@ public class MainGame extends BasicGame {
         this.actors = new ArrayList<>();
         this.player = new Player();
 
-        MoveStrategy ms1 = new MoveVertical(0, 0, 0.3f);
-        CircleActor ca1 = new CircleActor(ms1);
-        MoveStrategy ms2 = new MoveHorizontal(500, 100, 0.3f);
-        CircleActor ca2 = new CircleActor(ms2);
+        CircleActor ca1 = new CircleActor();
+        CircleActor ca2 = new CircleActor();
 
-        MoveStrategy ms3 = new MoveDiagonal(100, 200, 0.1f);
-        OvalActor oa1 = new OvalActor(ms3);
-        MoveStrategy ms4 = new MoveDiagonal(600, 300, 0.3f);
-        OvalActor oa2 = new OvalActor(ms4);
+        OvalActor oa1 = new OvalActor();
+        OvalActor oa2 = new OvalActor();
 
-        MoveStrategy ms5 = new MoveVertical(500, 200, 0.1f);
-        RectActor ra1 = new RectActor(ms5);
-        MoveStrategy ms6 = new MoveHorizontal(300, 200, 0.2f);
-        RectActor ra2 = new RectActor(ms6);
+        RectActor ra1 = new RectActor();
+        RectActor ra2 = new RectActor();
 
         this.actors.add(player);
         this.actors.add(ca1);
@@ -41,6 +35,11 @@ public class MainGame extends BasicGame {
         this.actors.add(oa2);
         this.actors.add(ra1);
         this.actors.add(ra2);
+
+        for (int i = 0; i < 10; i++){
+            Actor actor = RandomActorFactory.getRandomActor();
+            this.actors.add(actor);
+        }
 
         this.player.addObserver(ca1);
         this.player.addObserver(ca2);
