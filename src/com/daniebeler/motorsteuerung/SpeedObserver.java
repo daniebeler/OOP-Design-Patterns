@@ -2,5 +2,5 @@ package com.daniebeler.motorsteuerung;
 
 public interface SpeedObserver {
 
-    public void alert(int speed);
+    public void rangeReached(int speed);
 }

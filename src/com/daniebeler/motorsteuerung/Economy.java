@@ -1,14 +1,13 @@
 package com.daniebeler.motorsteuerung;
 
-public class Economy implements SpeedObserver {
+public class Economy extends AbstractMotorController {
 
-    private int min = 0;
-    private int max = 50;
 
-    @Override
-    public void alert(int speed) {
-        if(speed >= min && speed <= max){
-            System.out.println("Ich fahre Economy");
-        }
+    public Economy() {
+        super(0, 50);
+    }
+
+    public void drive() {
+        System.out.println("Driving in Economy");
     }
 }

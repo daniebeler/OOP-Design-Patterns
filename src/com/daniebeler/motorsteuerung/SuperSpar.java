@@ -1,14 +1,12 @@
 package com.daniebeler.motorsteuerung;
 
-public class SuperSpar implements SpeedObserver{
+public class SuperSpar extends AbstractMotorController{
 
-    private int min = 101;
-    private int max = 200;
+    public SuperSpar() {
+        super(101, 200);
+    }
 
-    @Override
-    public void alert(int speed) {
-        if(speed >= min && speed <= max){
-            System.out.println("Ich fahre SuperSpar");
-        }
+    public void drive() {
+        System.out.println("Driving in SuperSpar");
     }
 }

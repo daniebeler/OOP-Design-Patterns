@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        SpeedObserver economy = new Economy();
-        SpeedObserver topspeed = new TopSpeed();
-        SpeedObserver superspar = new SuperSpar();
-        SpeedObserver light = new LightController();
+        AbstractMotorController economy = new Economy();
+        AbstractMotorController topspeed = new TopSpeed();
+        AbstractMotorController superspar = new SuperSpar();
+        LightController light = new LightController();
 
         Car car = new Car();
 

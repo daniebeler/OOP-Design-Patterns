@@ -13,7 +13,7 @@ public class Car {
 
     public void drive(int speed){
         observers.forEach(observer -> {
-            observer.alert(speed);
+            observer.rangeReached(speed);
         });
 
     }
