@@ -1,8 +1,14 @@
 package com.daniebeler.motorsteuerung;
 
 public class TopSpeed implements MotorController{
+
+    private int min = 51;
+    private int max = 100;
+
     @Override
     public void drive(int speed) {
-        System.out.println("Ich fahre TopSpeed");
+        if(speed >= min && speed <= max){
+            System.out.println("Ich fahre Top Speed");
+        }
     }
 }

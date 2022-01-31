@@ -2,8 +2,13 @@ package com.daniebeler.motorsteuerung;
 
 public class SuperSpar implements MotorController{
 
+    private int min = 101;
+    private int max = 200;
+
     @Override
     public void drive(int speed) {
-        System.out.println("Ich fahre SuperSpar");
+        if(speed >= min && speed <= max){
+            System.out.println("Ich fahre SuperSpar");
+        }
     }
 }
