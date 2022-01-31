@@ -5,15 +5,15 @@ import java.util.List;
 
 public class Car {
 
-    List<MotorController> observers = new ArrayList<>();
+    List<SpeedObserver> observers = new ArrayList<>();
 
-    public void addObserver(MotorController os) {
-        this.observers.add(os);
+    public void addObserver(SpeedObserver so) {
+        this.observers.add(so);
     }
 
     public void drive(int speed){
         observers.forEach(observer -> {
-            observer.drive(speed);
+            observer.alert(speed);
         });
 
     }
