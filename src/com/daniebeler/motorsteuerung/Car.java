@@ -15,6 +15,5 @@ public class Car {
         observers.forEach(observer -> {
             observer.rangeReached(speed);
         });
-
     }
 }

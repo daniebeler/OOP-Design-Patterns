@@ -18,6 +18,7 @@ public class Main {
         car.addObserver(light);
 
         car.drive(12);
+        car.drive(30);
         car.drive(80);
         car.drive(175);
 
